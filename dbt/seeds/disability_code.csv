@@ -1,0 +1,10 @@
+disability,student_disability
+-3,Suppressed data
+-2,Not applicable
+-1,Missing/not reported
+0,Students without disabilities
+1,Students with disabilities served under IDEA
+2,Students with disabilities served under Section 504 only
+3,Students not served under IDEA /includes students without disabilities and students served under Section 504
+4,Students with disabilities /served under Section 504 and under IDEA
+99,Total

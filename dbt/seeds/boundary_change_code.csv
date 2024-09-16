@@ -1,0 +1,10 @@
+boundary_change_indicator,boundary_change_indic
+-1,Missing/not reported
+1,No change; operational
+2,Closed
+3,New
+4,Added
+5,Significant change in geographical boundaries or instructional responsibility
+6,Temporarily closed
+7,Future
+8,Reopened

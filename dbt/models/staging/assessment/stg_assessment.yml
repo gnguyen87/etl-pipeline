@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_assessment
+    description: math and reading assessment results by school district, grade, race, and year per row
+    columns:
+      - name: k_grade_race
+        description: surrogate key defined by grade and race
+        tests:
+          - not_null
+      - name: k_school_district
+        description: surrogate key defined by school district leaid (Local education agency identification number (NCES)) 
+        tests:
+          - not_null
+      - name: student_grade
+        description: student grade
+        tests:
+          - accepted_values:
+              values:
+                - '3'
+                - '4'
+                - '5'
+                - '6'
+                - '7'
+                - '8'
+                - '9-12'
+                - 'Total'
+

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fct_assessment
+    description: Assessment data for each school district by grade, race, and year per row
+    columns:
+      - name: k_school_district
+        description: primary key, surrogate key of school district leaid (Local education agency identification number (NCES))
+        tests:
+          - not_null
+    

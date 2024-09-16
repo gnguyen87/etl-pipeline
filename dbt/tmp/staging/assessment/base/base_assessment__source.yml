@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw_jm
+    database: analytics
+    schema: raw_jm
+    tables:
+      - name: assessment

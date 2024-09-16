@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_grade_race
+    description: surrogate key identified by a combination of grade and race per row
+    columns:
+      - name: k_grade_race
+        description: primary key, surrogate key
+        tests:
+          - not_null
+          - unique
+      - name: student_race
+        description: student_race
+        tests:
+          - not_null
+      - name: student_grade
+        description: student grade
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - 'Suppressed data'
+                - 'Not applicable'
+                - 'Pre-K'
+                - 'Kindergarten'
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+                - '6'
+                - '7'
+                - '8'
+                - '9-12'
+                - 'Total'
+

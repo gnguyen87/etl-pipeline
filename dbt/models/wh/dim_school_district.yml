@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_school_district
+    description: Most updated school district's directory information per row
+    columns:
+      - name: k_school_district
+        description: primary key, surrogate key of school district leaid (Local education agency identification number (NCES))
+        tests:
+          - not_null
+          - unique
+    

@@ -1,0 +1,12 @@
+agency_level,agency_ed_level
+-3,Suppressed data
+-2,Not applicable
+-1,Missing/not reported
+0,Prekindergarten
+1,Primary
+2,Middle
+3,High
+4,Other
+5,Ungraded
+6,Adult Education
+7,Secondary

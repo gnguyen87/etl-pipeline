@@ -1,0 +1,96 @@
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'de_training_na'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'de_training'
+
+# These configurations specify where dbt should look for different types of files.
+# The `source-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_modules"
+
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+# In this example config, we tell dbt to build all models in the example/ directory
+# as tables. These settings can be overridden in the individual model files
+# using the `{{ config(...) }}` macro.
+models:
+    materialized: table
+
+seeds:
+  de_training_na:
+    +enabled: true
+    grade_code:
+      +quote_columns: true 
+      +column_types: 
+        grade_edfacts: varchar(2)
+        grade: varchar(10)
+    race_code:
+      +quote_columns: true 
+      +column_types: 
+        race: varchar(2)
+    sex_code:
+      +quote_columns: true 
+      +column_types: 
+        sex: varchar(2)
+    lang_prof_code:
+      +quote_columns: true 
+      +column_types: 
+        lep: varchar(2)
+    fip_state_code:
+      +quote_columns: true 
+      +column_types: 
+        fips: varchar(4)
+    agency_charter_code:
+      +quote_columns: true 
+      +column_types: 
+        agency_charter_indicator: varchar(2)
+    agency_level_code:
+      +quote_columns: true 
+      +column_types: 
+        agency_level: varchar(2)
+    agency_type_code:
+      +quote_columns: true 
+      +column_types: 
+        agency_type: varchar(2)
+    boundary_change_code:
+      +quote_columns: true 
+      +column_types: 
+        boundary_change_indicator: varchar(2)
+    cbsa_code:
+      +quote_columns: true 
+      +column_types: 
+        cbsa_type: varchar(2)
+        cbsa: varchar(2)
+    grade_offered_code:
+      +quote_columns: true 
+      +column_types: 
+        grade_offered_ccd: varchar(2)
+    urban_centric_locale_code:
+      +quote_columns: true 
+      +column_types: 
+        urban_centric_locale: varchar(2)
+    disability_code:
+      +quote_columns: true 
+      +column_types: 
+        disability: varchar(2)
+      
+
+
+

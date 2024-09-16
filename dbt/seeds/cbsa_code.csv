@@ -1,0 +1,6 @@
+cbsa_type,meaning
+-3,Suppressed data 
+-2,Not applicable
+-1,Missing/not reported
+1,Metropolitan statistical area
+2,Micropolitan statistical area
